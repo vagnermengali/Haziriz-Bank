@@ -7,11 +7,11 @@ export const GlobalStyles = createGlobalStyle`
   --blue-1: #003F7C;
   --blue-2: #0052A1;
   --black: #000000;
-  --gray-4: #121214;
-  --gray-3: #212529;
-  --gray-2: #343B41;
-  --gray-1: #868E96;
-  --gray-0: #F8F9FA;
+  --grey-4: #121214;
+  --grey-3: #212529;
+  --grey-2: #343B41;
+  --grey-1: #868E96;
+  --grey-0: #F1F1F1;
   --white: #FFFFFF;
   --negative: #E83F5B;
   --sucess: #3FE864;
@@ -22,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-family: Inter, sans-serif;
-    background-color: #F1F1F1;
+    background-color: var(--grey-0);
   }
 
   a, button {
@@ -69,10 +69,10 @@ export const ResetCSS = createGlobalStyle`
   width: 7px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--gray-4);
+    background: var(--grey-0);
   }
   ::-webkit-scrollbar-thumb {
-    background-color: var(--gray-2);
+    background-color: var(--white);
     border-radius: 20px;     
   }
   ol, ul {
