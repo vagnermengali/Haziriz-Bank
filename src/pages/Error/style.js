@@ -14,6 +14,7 @@ export const ContainerSection = styled.section`
     line-height: 1.22;
     letter-spacing: 0;
     text-transform: none;
+    text-align:center;
   }
 
   .link {

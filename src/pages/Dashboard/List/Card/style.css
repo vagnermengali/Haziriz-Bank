@@ -1,0 +1,167 @@
+.titleNoCard {
+    font-weight: 700;
+    font-size: 1.45vw;
+    color: var(--grey-4);
+    margin: 2.5% 0;
+}
+.imgNoCard {
+    width: 100%;
+}
+.cardExit {
+    width: 93%;
+    height: min-content;
+    margin: 4% 0;
+    list-style: none;
+    background: var(--white);
+    border-radius: 0.3vw;
+    border-left: 0.4vw solid var(--red-1);
+    padding: 3%;
+}
+.cardExit:hover{
+    background: var(--white);
+    box-shadow: 0px 4px 42px -12px rgba(0, 0, 0, 0.05);
+}
+.cardExit p{
+    font-weight: 400;
+    font-size: 0.9vw;
+    color: var(--black);
+}
+.cardEnter {
+    width: 93%;
+    height: min-content;
+    margin: 4% 0;
+    list-style: none;
+    background: var(--white);
+    border-radius: 0.3vw;
+    border-left: 0.4vw solid var(--green-1);
+    padding: 3%;
+}
+.cardEnter:hover{
+    background: var(--white);
+    box-shadow: 0px 4px 42px -12px rgba(0, 0, 0, 0.05);
+}
+.cardEnter p{
+    font-weight: 400;
+    font-size: 0.9vw;
+    color: var(--black);
+}
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.cardTitle p{
+    font-weight: 700;
+    font-size: 1vw;
+    color: var(--black);
+}
+.cardTitle h1{
+    font-weight: 700;
+    font-size: 1.3vw;
+    color: var(--black);
+}
+.cardPrice {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardPrice p{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    color: var(---black);
+}
+.cardPrice button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3vw;
+    margin: 0;
+    background: var(--white);
+    border-radius: 0.5vw;
+    border: 0.5vw solid var(--white);
+    color: var(--black);
+}
+.cardPrice button:hover{
+    background: var(--white);
+    border-radius: 0.5vw;
+    border: 0.5vw solid var(--white);
+    color: var(--red-1);
+    cursor: pointer;
+}
+@media only screen and (max-width:950px){
+    .titleNoCard {
+        font-size: 1.75vw;
+    }
+    .cardExit {
+        height: 4.8vw;
+    }
+    .cardExit p{
+        font-size: 1.1vw;
+    }
+    .cardEnter {
+        height: 4.8vw;
+    }
+    .cardEnter p{
+        font-size: 1.1vw;
+    }
+    .cardTitle p{
+        font-weight: 700;
+        font-size: 1vw;
+        color: var(--grey-4);
+    }
+    .cardTitle h1{
+        font-size: 1.5vw;
+    }
+    .cardPrice p{
+        font-size: 1.1vw;
+    }
+    .cardPrice button{
+        width: 2.6vw;
+        height: 2.6vw;
+    }
+}
+@media only screen and (max-width:600px){
+.titleNoCard {
+    font-size: 3.45vw;
+}
+.cardExit {
+    border-radius: 0.8vw;
+    height: 8.3vw;
+}
+.cardExit:hover{
+    border-radius: 0.8vw;
+}
+.cardExit p{
+    font-size: 2.9vw;
+}
+.cardEnter {
+    border-radius: 0.8vw;
+    height: 8.3vw;
+}
+.cardEnter:hover{
+    border-radius: 0.8vw;
+}
+.cardEnter p{
+    font-size: 2.9vw;
+}
+.cardContainer {
+    margin-bottom: -1vw;
+}
+.cardTitle p{
+    font-size: 3vw;
+}
+.cardTitle h1{
+    font-size: 3.3vw;
+}
+.cardPrice p{
+    font-size: 2.7vw;
+}
+.cardPrice button{
+    width: 6vw;
+    height: 4vh;
+    border-radius: 0.8vw;
+}
+}

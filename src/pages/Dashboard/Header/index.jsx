@@ -1,7 +1,11 @@
 import logo from "../../../assets/image/logo-letter.svg";
+import { BsBoxArrowRight } from "react-icons/bs";
+import { useContext } from "react";
 import { HeaderContainer } from "./style";
+import { Context } from "../../../providers/userContext";
 
 function Header() {
+  const { navigate } = useContext(Context);
   return (
     <HeaderContainer>
       <div className="headerContent">
@@ -10,7 +14,16 @@ function Header() {
             <img src={logo} alt="logo-letter" />
           </div>
           <div className="btnContent">
-            <button className="btnLogout">Inicio</button>
+            <button
+              className="btnLogout"
+              onClick={() => {
+                window.localStorage.clear();
+                navigate("/");
+              }}
+            >
+              Log out 
+              <BsBoxArrowRight />
+            </button>
           </div>
         </div>
       </div>

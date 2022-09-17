@@ -31,7 +31,7 @@ export const HeaderContainer = styled.header`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 4.3vw;
+    width: 6vw;
     height: 2.5vw;
     background: var(--blue-2);
     border: 1.4px solid var(--blue-2);
@@ -57,7 +57,7 @@ export const HeaderContainer = styled.header`
     }
   }
     .btnLogout {
-      width: 7.5vw;
+      width: 10vw;
       height: 4vw;
       font-size: 1.8vw;
     }
@@ -74,7 +74,7 @@ export const HeaderContainer = styled.header`
     }
   }
     .btnLogout {
-      width: 15.5vw;
+      width: 21.1vw;
       height: 7.5vw;
       border-radius: 1vw;
       font-size: 3.5vw;

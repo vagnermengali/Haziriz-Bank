@@ -1,26 +1,22 @@
-.containerMain {
-    width: 100%;
+import styled from "styled-components";
+
+export const ContainerMain= styled.main`
+      width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin: 2.5% 0;
-}
-
-.main{
+    .main{
     width: 65%;
     display: flex;
     justify-content: space-around;
 }
-@media only screen and (max-width:950px){
-    
-}
-@media only screen and (max-width:600px){
-    .containerMain {
+  @media (max-width: 600px) {
         width: 100%;
         display: flex;
         justify-content: center;
         margin: 4.5% 0;
-    }
+    
     
     .main{
         width: 100%;
@@ -29,3 +25,4 @@
         align-items: center;
     }
 }
+`;
