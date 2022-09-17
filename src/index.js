@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom"
 import { GlobalStyles } from './style/global';
 import  { ResetCSS }  from './style/global';
-import Provider from './context/userContext';
+import Provider from './providers/lottieContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
