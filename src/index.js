@@ -5,17 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom"
 import { GlobalStyles } from './style/global';
 import  { ResetCSS }  from './style/global';
-import Provider from './providers/lottieContext';
+import ProviderLottie from './providers/lottieContext';
+import ProviderUser from './providers/userContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Provider>
+    <ProviderLottie>
+      <ProviderUser>
       <GlobalStyles />
       <ResetCSS />
       <App />
-    </Provider>
+      </ProviderUser>
+    </ProviderLottie>
     </BrowserRouter>
   </React.StrictMode>
 );

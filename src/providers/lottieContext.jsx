@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 
 export const Context = createContext();
 
-const ProviderUser = ({children}) => {
+const ProviderLottie = ({children}) => {
   
     const [animateState] = useState({
         isStopped: false,
@@ -27,4 +27,4 @@ const ProviderUser = ({children}) => {
     )
 }
 
-export default ProviderUser
+export default ProviderLottie

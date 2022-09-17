@@ -10,11 +10,11 @@ function Error() {
  
     return (
         <ContainerSection>
-           <h1>Oops, algo deu errado…</h1>
+           <h1>Oops, something went wrong...</h1>
             <div> 
             <Lottie className="img" options={defaultOptionsOne} isStopped={animateState.isStopped} isPaused={animateState.isPaused}/>
             </div>
-            <Link className="link"to="/">Voltar para a página principalㅤ<BsArrowRight/></Link>
+            <Link className="link"to="/">Back to main pageㅤ<BsArrowRight/></Link>
         </ContainerSection>
     )
 }
