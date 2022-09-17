@@ -2,9 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 :root {
-  --color-primary: #FF577F;
-  --color-primary-focus: #FF427F;
-  --color-primary-negative: #59323F;
+  --green-1: #50AC25;
+  --green-2: #006A40;
+  --blue-1: #003F7C;
+  --blue-2: #0052A1;
+  --black: #000000;
   --gray-4: #121214;
   --gray-3: #212529;
   --gray-2: #343B41;
@@ -20,7 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-family: Inter, sans-serif;
-    background-color: var(--gray-4);
+    background-color: #F1F1F1;
   }
 
   a, button {
