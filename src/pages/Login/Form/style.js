@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const Title = styled.h1`
-        font-weight: 700;
-        font-size: 1.5vw;
-        line-height: 2vw;
-        color: var(--black);
-        text-align:center;
-        margin-bottom:1vw;
-`
+  font-weight: 700;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 1vw;
+`;
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
@@ -16,9 +16,8 @@ export const Label = styled.label`
   gap: 1.5px;
   color: var(--black);
 
-
   span {
-    height:0.5vw;
+    height: 0.5vw;
     font-weight: 400;
     font-size: 0.8vw;
     color: var(--red-1);
@@ -54,7 +53,7 @@ export const Button = styled.button`
   font-style: normal;
   font-weight: 700;
   font-size: 1vw;
-  text-transform:uppercase;
+  text-transform: uppercase;
   color: var(--golden-1);
   box-sizing: border-box;
   display: flex;
@@ -91,5 +90,58 @@ export const Form = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .link {
+    text-decoration: none;
+    color: var(--golden-1);
+  }
+  .link:hover {
+    color: var(--golden-2);
+  }
+`;
+export const ParagraphQuestion = styled.p`
+  width: 100%;
+  font-weight: 600;
+  font-size: 0.9vw;
+  line-height: 1.1vw;
+  color: var(--gray-1);
+  text-align: center;
+  margin-top: 1vw;
+`;
+export const SocialMediaLinks = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.9vw;
+  line-height: 1.1vw;
+  text-align: center;
+  margin-top: 1vw;
+
+  .iconGoogle {
+    width: 3vw;
+    height: 1.1vw;
+    color: var(--black-1);
+  }
+  .iconGoogle:hover {
+    color: var(--golden-1);
+  }
+  .iconLinkedin {
+    width: 3.5vw;
+    height: 1.3vw;
+    color: var(--black-1);
+  }
+  .iconLinkedin:hover {
+    color: var(--golden-1);
+  }
+  .iconFacebook {
+    width: 3vw;
+    height: 1.1vw;
+    color: var(--black-1);
+  }
+  .iconFacebook:hover {
+    color: var(--golden-1);
   }
 `;
