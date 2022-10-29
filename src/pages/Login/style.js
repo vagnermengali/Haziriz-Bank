@@ -23,5 +23,6 @@ export const Div = styled.div`
   align-items: center;
   gap: 4vw;
   width: 90%;
+  margin-top:3.5vw;
 `;
 

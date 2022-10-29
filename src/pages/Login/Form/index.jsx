@@ -1,8 +1,6 @@
 import {
   Form,
-  Label,
   Input,
-  InputError,
   Button,
   Title,
   ParagraphQuestion,
@@ -14,52 +12,57 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaFacebookF, FaGoogle } from "react-icons/fa";
+import { useContext } from "react";
+import { Context } from "../../../providers/userContext";
 
 function FormLogin() {
   const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({
+    handleChangeDisableEmail,
+    handleChangeDisablePassword,
+    isDisableEmail,
+    isDisablePassword,
+  } = useContext(Context);
+
+  const { handleSubmit } = useForm({
     resolver: yupResolver(formSchema),
   });
 
   return (
     <Form onSubmit={handleSubmit()}>
       <Title>Welcome Back!</Title>
-      <Label>
-        Email<span>{errors.email?.message}</span>
-      </Label>
-      <div className="divDescription">
-        {errors.email ? (
-          <InputError
-            type="text"
-            placeholder="name@example.com"
-            {...register("email")}
-          />
-        ) : (
-          <Input
-            type="text"
-            placeholder="name@example.com"
-            {...register("email")}
-          />
-        )}
+      <div class="form__group field">
+        <Input
+          required=""
+          placeholder="Name"
+          class="form__field"
+          type="input"
+          onChange={(e) => handleChangeDisableEmail(e.target.value)}
+        />
+        <label class="form__label" for="name">
+          Email
+        </label>
       </div>
-      <Label>
-        Password<span>{errors.password?.message}</span>
-      </Label>
-      <div className="divDescription">
-        {errors.password ? (
-          <InputError
-            type="text"
-            placeholder="password"
-            {...register("password")}
-          />
-        ) : (
-          <Input type="text" placeholder="password" {...register("password")} />
-        )}
+      <div class="form__group field">
+        <Input
+          required=""
+          placeholder="Name"
+          class="form__field"
+          type="input"
+          onChange={(e) => handleChangeDisablePassword(e.target.value)}
+        />
+        <label class="form__label" for="name">
+          Password
+        </label>
       </div>
-      <Button type="submit">Log in</Button>
+      {isDisableEmail && isDisablePassword ? (
+        <Button type="submit" disabled={false}>
+          Log in
+        </Button>
+      ) : (
+        <Button type="submit" disabled={true}>
+          Log in
+        </Button>
+      )}
       <ParagraphQuestion>
         Dont have and account?{" "}
         <Link className="link" to="/register">
@@ -67,24 +70,15 @@ function FormLogin() {
         </Link>
       </ParagraphQuestion>
       <SocialMediaLinks>
-        <Link
-          
-          src="https://github.com/vagnermengali/Haziriz-Bank"
-        >
-          <FaGoogle className="iconGoogle"/>
-        </Link>
-        <Link
-          
-          src="https://github.com/vagnermengali/Haziriz-Bank"
-        >
-          <FaLinkedinIn className="iconLinkedin"/>
-        </Link>
-        <Link
-          
-          src="https://github.com/vagnermengali/Haziriz-Bank"
-        >
-          <FaFacebookF className="iconFacebook"/>
-        </Link>
+        <a href="https://mail.google.com/mail/u/0/?tab=rm#inbox?compose=CllgCKCJDZCBxkTLWFmlgChSlzCcJghwQDjLqFLWPVSgmSCgZqxHmxLlBjBwqdbfnsQbdQTtzLB">
+          <FaGoogle className="iconGoogle" />
+        </a>
+        <a href="https://www.linkedin.com/in/vagnermengali/">
+          <FaLinkedinIn className="iconLinkedin" />
+        </a>
+        <a href="https://ms-my.facebook.com/vagner.mengali.9">
+          <FaFacebookF className="iconFacebook" />
+        </a>
       </SocialMediaLinks>
     </Form>
   );
