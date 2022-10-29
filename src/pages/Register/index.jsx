@@ -7,9 +7,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import image from "../../assets/image/Frame.svg";
 import Header from "../../components/Header";
-import FormLogin from "./Form";
+import FormRegister from "./Form";
 
-function Login() {
+function Register() {
 
   return (
     <motion.div
@@ -23,7 +23,7 @@ function Login() {
           <Header />
           <Div>
             <Img className="img" src={image} alt="" />
-            <FormLogin/>
+            <FormRegister/>
           </Div>
         </Section>
       </>
@@ -31,4 +31,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

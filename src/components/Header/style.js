@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   width: 100%;
-  background: var(--white);
+  background: var(--black-1);
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@ export const HeaderContainer = styled.header`
     }
     .link {
       text-decoration: none;
-      color: var(--black);
+      color: var(--grey-5);
     }
     .link:hover {
       color: var(--golden-1);

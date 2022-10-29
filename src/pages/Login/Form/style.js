@@ -2,18 +2,17 @@ import styled from "styled-components";
 
 export const Title = styled.h1`
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   line-height: 2vw;
   color: var(--black);
   text-align: center;
-  margin-bottom: 1vw;
+
 `;
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  font-size: 1.1vw;
-  gap: 1.5px;
+  font-size: 1vw;
   color: var(--black);
 
   span {
@@ -24,37 +23,53 @@ export const Label = styled.label`
   }
 `;
 export const Input = styled.input`
-  width: 99%;
-  font-weight: 400;
-  font-size: 1.1vw;
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--black-1);
+  outline: 0;
+  font-size: 17px;
   color: var(--grey-1);
-  box-sizing: border-box;
-  padding: 3.2%;
-  background: var(--grey-6);
-  border: 0.15vw solid var(--grey-0);
-  border-radius: 0.5vw;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
 
-  outline: 2px solid var(--black);
-`;
-export const InputError = styled.input`
-  width: 99%;
-  font-weight: 400;
-  font-size: 1.1vw;
-  color: var(--grey-1);
-  box-sizing: border-box;
-  padding: 3.2%;
-  background: var(--beige-1);
-  border: 0.15vw solid var(--grey-0);
-  border-radius: 0.5vw;
 
-  outline: 2px solid var(--red-1);
+::placeholder {
+  color: transparent;
+}
+
+:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+  :focus {
+  padding-bottom: 6px;
+  border-width: 3px;
+  border-image: linear-gradient(to right, var(--golden-1), var(--golden-2));
+  border-image-slice: 1;
+}
+
+:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  color: var(--golden-2);
+  font-weight: 700;
+}
+
+:required, :invalid {
+  box-shadow: none;
+}
 `;
 export const Button = styled.button`
   font-style: normal;
   font-weight: 700;
   font-size: 1vw;
   text-transform: uppercase;
-  color: var(--golden-1);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -63,16 +78,30 @@ export const Button = styled.button`
   padding: 4% 9%;
   width: 100%;
   height: 9%;
-  background: var(--black-2);
-  border: 0.15vw solid var(--black-2);
-  border-radius: 0.5vw;
+  :enabled {
+    color: var(--golden-1);
+    background: var(--black-2);
+    border: 0.15vw solid var(--black-2);
+    cursor: pointer;
 
-  cursor: pointer;
+    :hover {
+      background: var(--black);
+      color: var(--golden-2);
+      border: 0.15vw solid var(--black);
+    }
+  }
 
-  :hover {
-    background: var(--black);
-    color: var(--golden-2);
-    border: 0.15vw solid var(--black);
+  :disabled {
+    color: var(--grey-7);
+    background: var(--grey-5);
+    border: 0.15vw solid var(--grey-7);
+    cursor: default;
+
+    :hover {
+      color: var(--grey-7);
+      background: var(--grey-5);
+      border: 0.15vw solid var(--grey-7);
+    }
   }
 `;
 export const Form = styled.form`
@@ -82,7 +111,7 @@ export const Form = styled.form`
   width: 40%;
   height: min-content;
   padding: 0 6%;
-  gap: 1vw;
+  gap: 0.8vw;
 
   .divDescription {
     width: 100%;
@@ -99,15 +128,56 @@ export const Form = styled.form`
   .link:hover {
     color: var(--golden-2);
   }
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--black-1);
+  outline: 0;
+  font-size: 17px;
+  color: var(--grey-1);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+
+  color: var(--black-1);
+  pointer-events: none;
+}
+
+
 `;
 export const ParagraphQuestion = styled.p`
   width: 100%;
   font-weight: 600;
   font-size: 0.9vw;
-  line-height: 1.1vw;
   color: var(--gray-1);
   text-align: center;
-  margin-top: 1vw;
+  margin-top: 0.8vw;
 `;
 export const SocialMediaLinks = styled.div`
   display: flex;
@@ -116,9 +186,8 @@ export const SocialMediaLinks = styled.div`
   align-items: center;
   font-weight: 600;
   font-size: 0.9vw;
-  line-height: 1.1vw;
   text-align: center;
-  margin-top: 1vw;
+  margin-top: 0.5vw;
 
   .iconGoogle {
     width: 3vw;
