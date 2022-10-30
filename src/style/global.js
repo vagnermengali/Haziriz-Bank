@@ -32,7 +32,7 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
     font-family: Inter, sans-serif;
-    background-color: var(--grey-0);
+    background-color: var(--black-2);
   }
 
   a, button {
